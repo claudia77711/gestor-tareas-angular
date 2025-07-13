@@ -1,59 +1,76 @@
-# GestorTareas
+# Gestor de Tareas - Angular + JSON Server
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+Aplicación web sencilla construida con **Angular** y **JSON Server** que permite crear, editar, eliminar y marcar tareas como completadas o pendientes.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📋 Requisitos funcionales cumplidos
 
-```bash
-ng serve
-```
+- ✅ Listar tareas (título, descripción y estado).
+- ✅ Crear nuevas tareas.
+- ✅ Marcar como completada o pendiente.
+- ✅ Eliminar tareas.
+- ✅ Editar título y descripción (opcional extra ✔️).
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Tecnologías utilizadas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Framework principal:** Angular 17+
+- **Lenguaje:** TypeScript
+- **Simulación backend:** JSON Server
+- **Estilos:** Bootstrap + CSS personalizado con media queries
+- **Testing:** Jasmine + Karma (prueba unitaria incluida)
 
-```bash
-ng generate component component-name
-```
+---
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Instalación y ejecución
 
-```bash
-ng generate --help
-```
+1. **Clona el repositorio:**
 
-## Building
+   ```bash
+   git clone https://github.com/claudia77711/gestor-tareas-angular.git
+   cd gestor-tareas-angular
 
-To build the project run:
 
-```bash
-ng build
-```
+2. Instala las dependencias del proyecto:
+    npm install
+3. Inicia el servidor de backend simulado (JSON Server):
+    npx json-server --watch db.json --port 3000
+4. Levanta la aplicación Angular:
+    ng serve
+5. Abrir en el navegador:
+     http://localhost:4200
+6. Correr prueba unitarias
+    ng test
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Justificación tecnológica:
 
-## Running unit tests
+* Se eligió Angular porque es un framework robusto, estructurado y ampliamente usado en entornos        empresariales como NTT Data.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+* Se usó JSON Server para simular un backend RESTful rápidamente.
 
-```bash
-ng test
-```
+* Bootstrap y media queries aseguran una interfaz básica pero responsiva.
 
-## Running end-to-end tests
+* El proyecto fue tipado fuertemente con TypeScript, ideal para mantener escalabilidad y buenas prácticas.
 
-For end-to-end (e2e) testing, run:
+* Se aplicó el patrón de servicios inyectables y separación de lógica (componentes vs servicios).  
 
-```bash
-ng e2e
-```
+## Tiempo invertido estimado
+Aproximadamente 12 a 15 horas, distribuidas entre:
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Lógica funcional: 6 horas
 
-## Additional Resources
+Diseño e interfaz: 2 horas
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Pruebas unitarias: 2 horas
+
+Debugging y ajustes: 2 horas
+
+Documentación y entrega: 1-2 horas
+
+ ## Autor
+
+Claudia Esperanza
+Desarrolladora Frontend
+GitHub: @claudia77711
