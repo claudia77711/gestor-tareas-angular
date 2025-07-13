@@ -4,17 +4,17 @@ Aplicación web sencilla construida con **Angular** y **JSON Server** que permit
 
 ---
 
-## 📋 Requisitos funcionales cumplidos
+## Requisitos funcionales cumplidos
 
-- ✅ Listar tareas (título, descripción y estado).
-- ✅ Crear nuevas tareas.
-- ✅ Marcar como completada o pendiente.
-- ✅ Eliminar tareas.
-- ✅ Editar título y descripción (opcional extra ✔️).
+-  Listar tareas (título, descripción y estado).
+-  Crear nuevas tareas.
+-  Marcar como completada o pendiente.
+-  Eliminar tareas.
+-  Editar título y descripción.
 
 ---
 
-## 🚀 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **Framework principal:** Angular 17+
 - **Lenguaje:** TypeScript
@@ -24,11 +24,10 @@ Aplicación web sencilla construida con **Angular** y **JSON Server** que permit
 
 ---
 
-## 📦 Instalación y ejecución
+## Instalación y ejecución
 
 1. **Clona el repositorio:**
 
-   ```bash
    git clone https://github.com/claudia77711/gestor-tareas-angular.git
    cd gestor-tareas-angular
 
