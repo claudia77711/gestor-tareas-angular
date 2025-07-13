@@ -1,6 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { appConfig } from './app/app.config';
-import { App } from './app/app';
+import { TasksComponent } from './app/pages/tasks.component/tasks.component';
+import { provideHttpClient } from '@angular/common/http';
 
-bootstrapApplication(App, appConfig)
-  .catch((err) => console.error(err));
+bootstrapApplication( TasksComponent, {
+  providers: [provideHttpClient()]
+}).catch((err) => console.error(err));

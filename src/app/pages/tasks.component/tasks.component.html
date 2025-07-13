@@ -1,0 +1,45 @@
+<div class="tasks-container container">
+    
+        <h1 class="text-primary mb-4">Tasks Manager</h1>
+        <h2 class="h4">Add Task</h2>
+    
+
+    <form (ngSubmit)="addTask()" #taskForm="ngForm" class="mb-4">
+        
+            <input type="text" name="title" [(ngModel)]="newTask.title" placeholder="Title" required minlength="3"
+                #titleRef="ngModel" class="form-control mb-2"/>
+            <div *ngIf="titleRef.invalid && titleRef.touched" class="text-danger mb-2">
+                <div *ngIf="titleRef.errors?.['required']">Title required.</div>
+                <div *ngIf="titleRef.errors?.['minlength']">Title must be at least 3 characters</div>
+            </div>
+        
+       
+            <textarea name="description" [(ngModel)]="newTask.description" placeholder="Description" required
+                #descRef="ngModel" class="form-control mb-2"></textarea>
+            <div *ngIf="descRef.invalid && descRef.touched" class="text-danger mb-2">
+                <div *ngIf="descRef.errors?.['required']">Description is required</div>
+            </div>
+       
+        <button type="submit" class="btn btn-success" [disabled]="taskForm.invalid">
+            {{ editingTaskId ? 'Update Task' : 'Add Task' }}
+        </button>
+    </form>
+    <hr />
+    <ul class="list-unstyled">
+        <li *ngFor="let task of tasks; trackBy: trackByTaskId" class="task-item p-3 mb-3 border rounded shadow-sm">
+            <h3 [style.text-decoration]="task.completed ? 'line-through' : 'none'" class="h5 text-dark">
+                {{ task.title }}
+            </h3>
+            <p class="mb-1">{{ task.description }}</p>
+            <p><strong>Status:</strong> {{ task.completed ? 'Completed' : 'Pending' }}</p>
+            <div class="d-flex flex-wrap gap-2 mt-2">
+                <button (click)="toggleTaskStatus(task)" class="btn btn-outline-secondary btn-sm">
+                    {{ task.completed ? 'Mark as Pending' : 'Mark as Completed'}}
+                </button>
+                <button class="btn btn-outline-primary btn-sm" (click)="deleteTask(task.id)">Delete Task</button>
+                <button class="btn btn-outline-danger btn-sm" (click)="editTask(task)">Edit Task</button>
+            </div>
+            <hr />
+        </li>
+    </ul>
+</div>
